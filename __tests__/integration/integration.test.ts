@@ -1,6 +1,12 @@
 import { createDeploymentFromInputs } from '../../src/api-wrapper'
 // we use the Octopus API client to setup and teardown integration test data, it doesn't form part of create-release-action at this point
-import { PackageRequirement, ProjectResource, RunCondition, StartTrigger } from '@octopusdeploy/message-contracts'
+import {
+  PackageRequirement,
+  ProjectResource,
+  RunCondition,
+  StartTrigger,
+  TenantedDeploymentMode
+} from '@octopusdeploy/message-contracts'
 import {
   Client,
   ClientConfiguration,
@@ -122,6 +128,9 @@ describe('integration tests', () => {
       LifecycleId: lifeCycle.Id,
       ProjectGroupId: projectGroup.Id
     })
+
+    project.TenantedDeploymentMode = TenantedDeploymentMode.Tenanted
+    project = await repository.projects.modify(project)
 
     const deploymentProcess = await repository.deploymentProcesses.get(project.DeploymentProcessId, undefined)
     deploymentProcess.Steps = [
