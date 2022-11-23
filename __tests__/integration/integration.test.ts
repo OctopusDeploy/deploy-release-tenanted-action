@@ -171,7 +171,7 @@ describe('integration tests', () => {
     let setA: TagSet
     const tagSetRepository = new TagSetRepository(apiClient, apiClientConfig.space || 'Default')
     const tagSets = await tagSetRepository.list()
-    if (tagSets.Items.filter(ts => ts.Name === 'setA')) {
+    if (tagSets.Items.filter(ts => ts.Name === 'setA').length > 0) {
       setA = tagSets.Items.filter(ts => ts.Name === 'setA')[0]
       if (setA.Tags.filter(t => t.Name === 'tagB').length === 0) {
         setA.Tags.push({ Name: 'tagB', Color: '#000000', Id: '', Description: '', CanonicalTagName: '', SortOrder: 1 })
@@ -184,25 +184,32 @@ describe('integration tests', () => {
       })
     }
 
+    const projectEnvs: Record<string, string[]> = {}
+    projectEnvs[project.Id] = [devEnv.Id]
+
     const tenantRepository = new TenantRepository(apiClient, apiClientConfig.space || 'Default')
     const tenants = await tenantRepository.list()
     if (tenants.Items.filter(e => e.Name === 'Tenant A').length === 0) {
-      const projectEnvs: Record<string, string[]> = {}
-      projectEnvs[project.Id] = [devEnv.Id]
       await tenantRepository.create({
         Name: 'Tenant A',
         ProjectEnvironments: projectEnvs
       })
+    } else {
+      let tenantA = tenants.Items.filter(e => e.Name === 'Tenant A')[0]
+      tenantA.ProjectEnvironments = projectEnvs
+      tenantA = await tenantRepository.modify(tenantA)
     }
 
     if (tenants.Items.filter(e => e.Name === 'Tenant B').length === 0) {
-      const projectEnvs: Record<string, string[]> = {}
-      projectEnvs[project.Id] = [devEnv.Id]
       await tenantRepository.create({
         Name: 'Tenant B',
         TenantTags: [setA.Tags[0].CanonicalTagName],
         ProjectEnvironments: projectEnvs
       })
+    } else {
+      const tenantB = tenants.Items.filter(e => e.Name === 'Tenant B')[0]
+      tenantB.ProjectEnvironments = projectEnvs
+      await tenantRepository.modify(tenantB)
     }
   })
 
