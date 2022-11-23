@@ -78,7 +78,7 @@ jobs:
       with:
         project: ${{ steps.npm_tests.outputs.gha_selftest_project_name }} # see integration.test.ts
         release_number: ${{ steps.npm_tests.outputs.gha_selftest_release_number }}
-        environemnt: 'Dev'
+        environment: 'Dev'
         tenants: |
           Tenant A
         tenant_tags: |
