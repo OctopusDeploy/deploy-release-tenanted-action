@@ -2851,7 +2851,9 @@ var BasicRepositoryV2 = /** @class */ (function () {
     };
     BasicRepositoryV2.prototype.modify = function (resource, args) {
         var _this = this;
-        return this.client.doUpdate(this.baseApiTemplate, resource, args).then(function (r) { return _this.notifySubscribersToDataModifications(r); });
+        return this.client
+            .doUpdate(this.baseApiTemplate, resource, __assign({ id: resource.Id }, args))
+            .then(function (r) { return _this.notifySubscribersToDataModifications(r); });
     };
     BasicRepositoryV2.prototype.save = function (resource) {
         if (isNewResource(resource)) {
@@ -4034,6 +4036,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.isResource = void 0;
+function isResource(resource) {
+    return "Id" in resource;
+}
+exports.isResource = isResource;
 
 
 /***/ }),
@@ -4406,7 +4413,8 @@ var SpaceScopedBasicRepositoryV2 = /** @class */ (function (_super) {
         return this.client.request(this.baseApiTemplate, __assign({ spaceName: this.spaceName }, args));
     };
     SpaceScopedBasicRepositoryV2.prototype.modify = function (resource, args) {
-        return _super.prototype.modify.call(this, resource, args);
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        return _super.prototype.modify.call(this, resource, __assign({ spaceName: this.spaceName }, args));
     };
     return SpaceScopedBasicRepositoryV2;
 }(basicRepositoryV2_1.BasicRepositoryV2));
@@ -4451,6 +4459,11 @@ exports.isSpaceScopedRequest = isSpaceScopedRequest;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.isSpaceScopedResource = void 0;
+function isSpaceScopedResource(resource) {
+    return "SpaceId" in resource;
+}
+exports.isSpaceScopedResource = isSpaceScopedResource;
 
 
 /***/ }),
@@ -4524,7 +4537,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TagSetRepository = void 0;
-var __1 = __nccwpck_require__(80586);
+var __1 = __nccwpck_require__(25024);
 var TagSetRepository = /** @class */ (function (_super) {
     __extends(TagSetRepository, _super);
     function TagSetRepository(client, spaceName) {
@@ -4610,7 +4623,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TenantRepository = void 0;
-var spaceScopedBasicRepositoryV2_1 = __nccwpck_require__(74564);
+var __1 = __nccwpck_require__(25024);
 var TenantRepository = /** @class */ (function (_super) {
     __extends(TenantRepository, _super);
     function TenantRepository(client, spaceName) {
@@ -4637,7 +4650,7 @@ var TenantRepository = /** @class */ (function (_super) {
         return this.client.request("~/api/{spaceId}/tenants/variables-missing{?tenantId,projectId,environmentId,includeDetails}", payload);
     };
     return TenantRepository;
-}(spaceScopedBasicRepositoryV2_1.SpaceScopedBasicRepositoryV2));
+}(__1.SpaceScopedBasicRepositoryV2));
 exports.TenantRepository = TenantRepository;
 
 
