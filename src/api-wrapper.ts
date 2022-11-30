@@ -1,7 +1,6 @@
 import { InputParameters } from './input-parameters'
 import {
   Client,
-  deployReleaseTenanted,
   CreateDeploymentTenantedCommandV1,
   DeploymentRepository,
   TenantRepository
@@ -29,7 +28,8 @@ export async function createDeploymentFromInputs(
     Variables: parameters.variables
   }
 
-  const response = await deployReleaseTenanted(client, command)
+  const deploymentRepository = new DeploymentRepository(client, parameters.space)
+  const response = await deploymentRepository.createTenanted(command)
 
   client.info(
     `🎉 ${response.DeploymentServerTasks.length} Deployment${
@@ -49,7 +49,6 @@ export async function createDeploymentFromInputs(
 
   const deploymentIds = response.DeploymentServerTasks.map(x => x.DeploymentId)
 
-  const deploymentRepository = new DeploymentRepository(client, parameters.space)
   const deployments = await deploymentRepository.list({ ids: deploymentIds, take: deploymentIds.length })
 
   const tenantIds = deployments.Items.map(d => d.TenantId || '')
