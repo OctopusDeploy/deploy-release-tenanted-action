@@ -130,6 +130,8 @@ describe('integration tests', () => {
       ProjectGroupId: projectGroup.Id
     })
 
+    // due to a bug in server, we have to call the GET so that VersioningStrategy is polyfilled correctly
+    project = await projectRepository.get(project.Id)
     project.TenantedDeploymentMode = TenantedDeploymentMode.Tenanted
     project = await projectRepository.modify(project)
 
