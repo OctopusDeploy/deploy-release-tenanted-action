@@ -7,7 +7,6 @@ import {
   DeploymentEnvironment,
   DeploymentProcessRepository,
   EnvironmentRepository,
-  ExecutionWaiter,
   LifecycleRepository,
   Logger,
   PackageRequirement,
@@ -18,6 +17,7 @@ import {
   RunCondition,
   RunConditionForAction,
   ServerTaskDetails,
+  ServerTaskWaiter,
   StartTrigger,
   TagSet,
   TagSetRepository,
@@ -272,8 +272,8 @@ describe('integration tests', () => {
     expect(output.getAllMessages()).toContain(`[INFO] 🎉 2 Deployments queued successfully!`)
 
     // wait for the deployment or the teardown will fail
-    const waiter = new ExecutionWaiter(client, standardInputParameters.space)
-    await waiter.waitForExecutionsToComplete(
+    const waiter = new ServerTaskWaiter(client, standardInputParameters.space)
+    await waiter.waitForServerTasksToComplete(
       result.map(r => r.serverTaskId),
       1000,
       60000,
