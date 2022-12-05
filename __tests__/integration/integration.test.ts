@@ -43,19 +43,19 @@ import { InputParameters } from '../../src/input-parameters'
 const apiClientConfig: ClientConfiguration = {
   userAgentApp: 'Test',
   apiKey: process.env.OCTOPUS_TEST_API_KEY || 'API-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-  instanceURL: process.env.OCTOPUS_TEST_URL || 'http://localhost:8050',
-  space: process.env.OCTOPUS_TEST_SPACE || 'Default'
+  instanceURL: process.env.OCTOPUS_TEST_URL || 'http://localhost:8050'
 }
 
 const runId = randomBytes(16).toString('hex')
 const localProjectName = `project${runId}`
+const spaceName = process.env.OCTOPUS_TEST_SPACE || 'Default'
 let localReleaseNumber = ''
 
 async function createReleaseForTest(client: Client): Promise<void> {
   client.info('Creating a release in Octopus Deploy...')
 
   const command: CreateReleaseCommandV1 = {
-    spaceName: apiClientConfig.space || 'Default',
+    spaceName,
     ProjectName: localProjectName
   }
 
@@ -73,7 +73,7 @@ describe('integration tests', () => {
   const standardInputParameters: InputParameters = {
     server: apiClientConfig.instanceURL,
     apiKey: apiClientConfig.apiKey,
-    space: apiClientConfig.space || 'Default',
+    space: spaceName,
     project: localProjectName,
     releaseNumber: '',
     environment: 'Dev',
@@ -178,7 +178,7 @@ describe('integration tests', () => {
     await deploymentProcessRepository.update(project, deploymentProcess)
 
     let setA: TagSet
-    const tagSetRepository = new TagSetRepository(apiClient, apiClientConfig.space || 'Default')
+    const tagSetRepository = new TagSetRepository(apiClient, spaceName)
     const tagSets = await tagSetRepository.list()
     if (tagSets.Items.filter(ts => ts.Name === 'setA').length > 0) {
       setA = tagSets.Items.filter(ts => ts.Name === 'setA')[0]
@@ -196,7 +196,7 @@ describe('integration tests', () => {
     const projectEnvs: Record<string, string[]> = {}
     projectEnvs[project.Id] = [devEnv.Id]
 
-    const tenantRepository = new TenantRepository(apiClient, apiClientConfig.space || 'Default')
+    const tenantRepository = new TenantRepository(apiClient, spaceName)
     const tenants = await tenantRepository.list()
     if (tenants.Items.filter(e => e.Name === 'Tenant A').length === 0) {
       await tenantRepository.create({
