@@ -1,4 +1,4 @@
-name: 'Deploy a Release to tenants in Octopus Deploy'
+name: 'Deploy a Tenanted Release in Octopus Deploy'
 description: 'GitHub Action to deploy a release in Octopus Deploy'
 author: 'Octopus Deploy'
 branding:
