@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v3.0.0...v3.0.1) (2023-01-11)
+
+
+### Bug Fixes
+
+* Fixed issue with prompted variable serialization ([#8](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/8)) ([efeb545](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/efeb545d5b580e1bb89ea9cff5f59beaaa99061d))
+
 ## 3.0.0 (2022-12-13)
 
 
