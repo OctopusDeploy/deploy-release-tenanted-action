@@ -9,6 +9,6 @@ test('get input parameters', () => {
   expect(inputParameters.tenants[0]).toBe('Tenant A')
   expect(inputParameters.tenants[1]).toBe('Tenant B')
   expect(inputParameters.variables).toBeDefined()
-  expect(inputParameters.variables?.get('foo')).toBe('quux')
-  expect(inputParameters.variables?.get('bar')).toBe('xyzzy')
+  expect(inputParameters.variables?.['foo']).toBe('quux')
+  expect(inputParameters.variables?.['bar']).toBe('xyzzy')
 })
