@@ -34,15 +34,15 @@ steps:
       project: 'MyProject'
       release_version: '1.0.0'
       environment: 'Dev'
-      tenants: [ |
+      tenants: |
         'Some Tenant A'
-        'Some Tenant B']
-      tenant_tags: [ |
+        'Some Tenant B'
+      tenant_tags: |
         'setA/someTagB'
-        'setC/someTagD']
-      variables: [ |
+        'setC/someTagD'
+      variables: |
         'Foo: Bar'
-        'Fizz: Buzz']
+        'Fizz: Buzz'
 ```
 
 ## ✍️ Environment Variables
