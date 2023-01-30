@@ -27,7 +27,7 @@ import { createDeploymentFromInputs } from './api-wrapper'
     const parameters = getInputParameters()
 
     const config: ClientConfiguration = {
-      userAgentApp: 'GitHubActions deploy-release-tenanted-action',
+      userAgentApp: 'GitHubActions (release;deploy-tenanted;v3)',
       instanceURL: parameters.server,
       apiKey: parameters.apiKey,
       logging: logger
