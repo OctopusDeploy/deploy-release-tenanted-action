@@ -279,10 +279,10 @@ describe('integration tests', () => {
       result.map(r => r.serverTaskId),
       1000,
       60000,
-      (serverTaskDetails: ServerTaskDetails): void => {
+      (serverTask: ServerTask): void => {
         // eslint-disable-next-line no-console
         console.log(
-          `Waiting for task ${serverTaskDetails.Task.Id}. Current status: ${serverTaskDetails.Task.State}, completed: ${serverTaskDetails.Progress.ProgressPercentage}%`
+          `Waiting for task ${serverTask.Id}. Current status: ${serverTask.State}`
         )
       }
     )
