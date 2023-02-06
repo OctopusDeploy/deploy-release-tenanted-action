@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.2](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v3.0.1...v3.0.2) (2023-02-06)
+
+
+### Bug Fixes
+
+* Fixed a bug with the capability API checks ([#14](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/14)) ([5ec4709](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/5ec4709434a4951f506bd729b7d3488908f2ce4a))
+* Updated client library to get capability checks and better information on required Octopus version ([4dfb4ed](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/4dfb4ed7d2dfa41a2eaf3a764c58e0e9560b9e98))
+
 ## [3.0.1](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v3.0.0...v3.0.1) (2023-01-11)
 
 
