@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.3](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v3.0.2...v3.0.3) (2023-04-20)
+
+
+### Bug Fixes
+
+* incorrectly error when server version is checked ([0a643eb](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/0a643ebebcfbd3795be2e125a202ec7a2cf7b70e))
+
 ## [3.0.2](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v3.0.1...v3.0.2) (2023-02-06)
 
 
