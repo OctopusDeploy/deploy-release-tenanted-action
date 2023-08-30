@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v3.0.3...v3.1.0) (2023-08-30)
+
+
+### Features
+
+* Adds support for authenticating with access token ([#21](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/21)) ([8515ddd](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/8515ddde6ea0e8c421f80e9d5a3304c9605b7bba))
+
 ## [3.0.3](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v3.0.2...v3.0.3) (2023-04-20)
 
 
