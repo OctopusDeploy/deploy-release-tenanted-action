@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.2.1](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v3.2.0...v3.2.1) (2024-02-04)
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([9d8154d](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/9d8154d7102c6925629b4c1f8d0388c8734985fe))
+* **deps:** update dependency @actions/core to v1.10.1 ([8a1ff2c](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/8a1ff2cbb1d1bd9382e9274c96255a8d39fb37c0))
+
 ## [3.2.0](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v3.1.0...v3.2.0) (2023-12-14)
 
 
