@@ -38,14 +38,14 @@ steps:
       release_version: '1.0.0'
       environment: 'Dev'
       tenants: |
-        'Some Tenant A'
-        'Some Tenant B'
+        Some Tenant A
+        Some Tenant B
       tenant_tags: |
-        'setA/someTagB'
-        'setC/someTagD'
+        setA/someTagB
+        setC/someTagD
       variables: |
-        'Foo: Bar'
-        'Fizz: Buzz'
+        Foo: Bar
+        Fizz: Buzz
 ```
 
 ## ✍️ Environment Variables
@@ -63,10 +63,10 @@ steps:
 | `project`            | **Required.** The name of the project associated with this release.                                                                                                                                          |
 | `release_number`     | **Required.** The release number to deploy.                                                                                                                                                                  |
 | `environment`        | **Required.** The environment names to deploy to.                                                                                                                                                            |
-| `tenants`            | The list of tenant names to deploy to.                                                                                                                                                                       |
-| `tenant_tags`        | The list of tenant tag canonical names to locate tenants to deploy to.                                                                                                                                       |
+| `tenants`            | The list of tenant names to deploy to. **NOTE** these values should not be enclosed in single-quotes (`'`)                                                                                                   |
+| `tenant_tags`        | The list of tenant tag canonical names to locate tenants to deploy to. **NOTE** these values should not be enclosed in single-quotes (`'`)                                                                   |
 | `use_guided_failure` | Whether to use guided failure mode if errors occur during the deployment.                                                                                                                                    |
-| `variables`          | A multi-line list of prompted variable values. Format: name:value.                                                                                                                                           |
+| `variables`          | A multi-line list of prompted variable values. Format: name:value. **NOTE** these values should not be enclosed in single-quotes (`'`)                                                                       |
 | `server`             | The instance URL hosting Octopus Deploy (i.e. "https://octopus.example.com/"). The instance URL is required, but you may also use the OCTOPUS_URL environment variable.                                      |
 | `api_key`            | The API key used to access Octopus Deploy. An API key is required, but you may also use the OCTOPUS_API_KEY environment variable. It is strongly recommended that this value retrieved from a GitHub secret. |
 | `space`              | The name of a space within which this command will be executed. The space name is required, but you may also use the OCTOPUS_SPACE environment variable.                                                     |
