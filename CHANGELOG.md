@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.0.0](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v3.2.3...v4.0.0) (2025-12-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* Migrate to node 24 ([#228](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/228))
+
+### Features
+
+* Add workflow to check for conventional commit format PR title ([#234](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/234)) ([817943f](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/817943f0a7b442928a239938016806c66b88d8bf))
+* Migrate to node 24 ([#228](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/228)) ([9a32ca1](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/9a32ca1f560c7910188e15e83f20498d2286c464))
+
 ## [3.2.3](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v3.2.2...v3.2.3) (2025-03-12)
 
 
