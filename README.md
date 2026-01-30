@@ -28,6 +28,7 @@ env:
 steps:
   # ...
   - name: Deploy a release in Octopus Deploy 🐙
+    id: deploy_a_release_in_octopus_depoloy
     uses: OctopusDeploy/deploy-release-tenanted-action@v4
     env:
       OCTOPUS_API_KEY: ${{ secrets.API_KEY  }}
@@ -36,6 +37,42 @@ steps:
     with:
       project: 'MyProject'
       release_version: '1.0.0'
+      environment: 'Dev'
+      tenants: |
+        Some Tenant A
+        Some Tenant B
+      tenant_tags: |
+        setA/someTagB
+        setC/someTagD
+      variables: |
+        Foo: Bar
+        Fizz: Buzz
+```
+
+Deploy a release created from the [Create a Release](https://github.com/marketplace/actions/create-release-in-octopus-deploy) action:
+
+
+```yml
+env:
+
+steps:
+  # ...
+  - name: Create a release in Octopus Deploy 🐙
+    id: create_a_release_in_octopus_deploy
+    uses: OctopusDeploy/create-release-action@v4
+    with:
+      project: 'MyProject'
+
+  - name: Deploy a release in Octopus Deploy 🐙
+    id: deploy_a_release_in_octopus_depoloy
+    uses: OctopusDeploy/deploy-release-tenanted-action@v4
+    env:
+      OCTOPUS_API_KEY: ${{ secrets.API_KEY  }}
+      OCTOPUS_URL: ${{ secrets.SERVER }}
+      OCTOPUS_SPACE: 'Outer Space'
+    with:
+      project: 'MyProject'
+      release_version: ${{ steps.create_a_release_in_octopus_deploy.outputs.release_number }}
       environment: 'Dev'
       tenants: |
         Some Tenant A
