@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.1](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.0...v4.0.1) (2026-03-25)
+
+
+### Bug Fixes
+
+* **deps:** Update core/actions to v3 ([#270](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/270)) ([7b20300](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/7b20300624ca0a5411520a538f544f683752b36a))
+
 ## [4.0.0](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v3.2.3...v4.0.0) (2025-12-18)
 
 
