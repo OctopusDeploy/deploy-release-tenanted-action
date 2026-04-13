@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.2](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.1...v4.0.2) (2026-04-13)
+
+
+### Bug Fixes
+
+* **deps:** bump axios from 1.13.5 to 1.15.0 ([#285](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/285)) ([f34e9e4](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/f34e9e46edea41d3adff077f7559166ba31b7f8f))
+
 ## [4.0.1](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.0...v4.0.1) (2026-03-25)
 
 
