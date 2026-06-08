@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.3](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.2...v4.0.3) (2026-06-08)
+
+
+### Bug Fixes
+
+* patch transitive axios vulnerability via npm audit fix ([#293](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/293)) ([13e1ab0](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/13e1ab00684977d3b9398ef7766cf89b80d17ae3))
+* update axios to v1.17.0 ([#302](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/302)) ([a477370](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/a47737086acbd189349c084692ef1f53c55a94d3))
+
 ## [4.0.2](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.1...v4.0.2) (2026-04-13)
 
 
