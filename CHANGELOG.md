@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.4](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.3...v4.0.4) (2026-06-29)
+
+
+### Bug Fixes
+
+* **deps:** bump undici from 6.24.1 to 6.27.0 ([#311](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/311)) ([f864464](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/f8644644148871e4ff77366dcc366d9f699c0074))
+
 ## [4.0.3](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.2...v4.0.3) (2026-06-08)
 
 
