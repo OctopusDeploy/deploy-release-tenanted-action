@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.0.4](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.3...v4.0.4) (2026-07-22)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump js-yaml from 4.1.1 to 4.3.0 ([#320](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/320)) ([2f885da](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/2f885da8a341b6394d1239bad30ec902afb6f416))
+* **deps:** bump @octopusdeploy/api-client to 3.11.5 ([#318](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/318)) ([3d8279c](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/3d8279c93e2ea4061473c0582f93f8d6d3daaf53))
+* **deps:** bump @octopusdeploy/api-client to 3.11.6 ([#324](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/324)) ([910fbde](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/910fbde848f1ca1037fbd030371e4591ea530de5))
+* **deps:** bump axios from 1.17.0 to 1.18.1 ([#317](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/317)) ([44bd49a](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/44bd49ac17003457a4c59a16d32db22c5b1eca2d))
+* **deps:** bump undici from 6.24.1 to 6.27.0 ([#311](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/311)) ([f864464](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/f8644644148871e4ff77366dcc366d9f699c0074))
+* **deps:** update js-yaml to resolve DoS advisory ([#323](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/323)) ([d6c2316](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/d6c2316e9a15ae1b30f8b9947c6ade725fac8cd8))
+
 ## [4.0.3](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.2...v4.0.3) (2026-06-08)
 
 
