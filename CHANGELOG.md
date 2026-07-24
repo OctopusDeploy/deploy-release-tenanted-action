@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.5](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.4...v4.0.5) (2026-07-24)
+
+
+### Bug Fixes
+
+* **deps:** bump brace-expansion to resolve DoS advisory ([#325](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/325)) ([4342275](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/43422750e269124e7b5fa7985993dfdb7a061461))
+* **deps:** resolve remaining npm audit advisories ([#327](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/327)) ([16e3dff](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/16e3dff0d595672f7e1eb533f7d0ae99e7514aa4))
+
 ## [4.0.4](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.3...v4.0.4) (2026-07-22)
 
 
