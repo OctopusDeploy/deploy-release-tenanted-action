@@ -1,5 +1,15 @@
 # Changelog
 
+## [4.0.5](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.4...v4.0.5) (2026-08-11)
+
+
+### Bug Fixes
+
+* **deps:** bump brace-expansion override to resolve DoS bypass ([#331](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/331)) ([16ca70c](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/16ca70ce25c59d257519acc0ca7d6051c8abd1c8))
+* **deps:** bump brace-expansion to resolve DoS advisory ([#325](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/325)) ([4342275](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/43422750e269124e7b5fa7985993dfdb7a061461))
+* **deps:** resolve new brace-expansion and js-yaml advisories ([#329](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/329)) ([8637440](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/8637440549f619efdb5f1bf2650eed6ed5765170))
+* **deps:** resolve remaining npm audit advisories ([#327](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/327)) ([16e3dff](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/16e3dff0d595672f7e1eb533f7d0ae99e7514aa4))
+
 ## [4.0.4](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.3...v4.0.4) (2026-07-22)
 
 
