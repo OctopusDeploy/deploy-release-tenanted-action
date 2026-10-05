@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.7](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.6...v4.0.7) (2026-10-05)
+
+
+### Bug Fixes
+
+* **deps:** bump undici from 6.28.0 to 6.29.0 ([#341](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/341)) ([6336147](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/633614760bb5a7591aa7f22db34fc2d5ad2d4b30))
+* **deps:** resolve npm audit advisories ([#346](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/346)) ([19b7478](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/19b7478e56510f78abbe76285849e19ca6b5b844))
+
 ## [4.0.6](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.5...v4.0.6) (2026-09-21)
 
 
