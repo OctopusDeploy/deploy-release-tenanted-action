@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.8](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.7...v4.0.8) (2026-10-11)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump handlebars from 4.7.9 to 4.7.10 ([#347](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/347)) ([69579d2](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/69579d20b53a3bcb7c46f3a5e79f31ae7983e4ed))
+
 ## [4.0.7](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.6...v4.0.7) (2026-10-05)
 
 
