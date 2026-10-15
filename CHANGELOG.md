@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.9](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.8...v4.0.9) (2026-10-15)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump esbuild from 0.25.1 to 0.28.1 ([#303](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/303)) ([ca85be5](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/ca85be500fd31b22607b249ea3b76cc1a53a3c6d))
+
 ## [4.0.8](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.7...v4.0.8) (2026-10-11)
 
 
