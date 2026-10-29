@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.10](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.9...v4.0.10) (2026-10-28)
+
+
+### Bug Fixes
+
+* **deps:** bump undici from 6.29.0 to 6.29.1 ([#352](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/352)) ([21c30d6](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/21c30d6186b26300ba292231a0e352766a3b8523))
+
 ## [4.0.9](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.8...v4.0.9) (2026-10-20)
 
 
