@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.11](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.10...v4.0.11) (2026-11-05)
+
+
+### Bug Fixes
+
+* **deps:** bump follow-redirects from 1.16.1 to 1.16.2 ([#364](https://github.com/OctopusDeploy/deploy-release-tenanted-action/issues/364)) ([cc6f6f0](https://github.com/OctopusDeploy/deploy-release-tenanted-action/commit/cc6f6f013423a9a938ad7375ebf757080cb0fdc2))
+
 ## [4.0.10](https://github.com/OctopusDeploy/deploy-release-tenanted-action/compare/v4.0.9...v4.0.10) (2026-10-28)
 
 
